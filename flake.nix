@@ -14,7 +14,7 @@
   };
   outputs = { self, nixpkgs, naersk, xremap }:
     let
-      system = "x86_64-linux";
+      system = "aarch64-linux";
       pkgs = import nixpkgs { inherit system; };
       naersk-lib = pkgs.callPackage naersk { };
       package = (import ./overlay xremap naersk-lib pkgs { }).xremap-unwrapped;
